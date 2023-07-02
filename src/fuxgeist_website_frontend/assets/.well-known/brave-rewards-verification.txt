@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: fuxgeist.com
+Token: cfb7a5e51c09c7ebb332f755044431cf95b3de55033b86ed5af5087fcee075f0
