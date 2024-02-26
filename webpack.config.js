@@ -75,15 +75,14 @@ module.exports = {
   // proxy /api to port 4943 during development.
   // if you edit dfx.json to define a project-specific local network, change the port to match.
   devServer: {
-    proxy: {
-      "/api": {
-        target: "http://127.0.0.1:4943",
+    proxy: [
+      {
+        context: ["/api"],
+        target: "http://localhost:4943",
         changeOrigin: true,
-        pathRewrite: {
-          "^/api": "/api",
-        },
+        pathRewrite: { "^/api": "/api" },
       },
-    },
+    ],
     static: path.resolve(__dirname, "src", frontendDirectory, "assets"),
     hot: true,
     watchFiles: [path.resolve(__dirname, "src", frontendDirectory)],
