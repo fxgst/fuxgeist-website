@@ -1,5 +1,6 @@
 import { readdirSync } from "node:fs";
 import { basename, resolve } from "node:path";
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 const frontendRoot = resolve(__dirname, "frontend");
@@ -13,6 +14,7 @@ const htmlInputs = Object.fromEntries(
 export default defineConfig({
 	root: frontendSrc,
 	publicDir: resolve(frontendRoot, "assets"),
+	plugins: [react()],
 	build: {
 		outDir: resolve(__dirname, "dist"),
 		emptyOutDir: true,
