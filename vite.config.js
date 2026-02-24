@@ -15,7 +15,7 @@ export default defineConfig({
 	publicDir: resolve(frontendRoot, "assets"),
 	envPrefix: ["VITE_", "CANISTER_", "DFX_"],
 	build: {
-		outDir: resolve(__dirname, "dist", "website"),
+		outDir: resolve(__dirname, "dist"),
 		emptyOutDir: true,
 		rollupOptions: {
 			input: htmlInputs,

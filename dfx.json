@@ -1,10 +1,7 @@
 {
 	"canisters": {
 		"frontend": {
-			"frontend": {
-				"entrypoint": "frontend/src/index.html"
-			},
-			"source": ["dist/website/"],
+			"source": ["dist"],
 			"type": "assets"
 		}
 	}
