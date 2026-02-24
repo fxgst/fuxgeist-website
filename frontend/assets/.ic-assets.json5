@@ -1,0 +1,10 @@
+[
+    {
+        "match": "**/*",
+        "disable_security_policy_warning": true
+    },
+    {
+        "match": ".well-known",
+        "ignore": false
+    }
+]

@@ -1,26 +1,15 @@
 {
-  "name": "fuxgeist_website_frontend",
-  "version": "0.2.0",
-  "scripts": {
-    "build": "webpack",
-    "start": "webpack serve --mode development --env development"
-  },
-  "devDependencies": {
-    "assert": "2.1.0",
-    "buffer": "6.0.3",
-    "copy-webpack-plugin": "^12.0.2",
-    "dotenv": "^16.4.5",
-    "events": "3.3.0",
-    "html-webpack-plugin": "5.6.0",
-    "process": "0.11.10",
-    "stream-browserify": "3.0.0",
-    "terser-webpack-plugin": "^5.3.10",
-    "util": "0.12.5",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2"
-  },
-  "engines": {
-    "node": "^21"
-  }
+	"name": "website",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"check": "biome check ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.4",
+		"vite": "^7.3.1"
+	}
 }
