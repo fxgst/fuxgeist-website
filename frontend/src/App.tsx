@@ -129,7 +129,7 @@ function ContactPage() {
 			</div>
 			<footer>
 				This website is hosted entirely{" "}
-				<a href="https://fdesx-eiaaa-aaaan-qd27q-cai.icp0.io/">on-chain</a> on
+				<a href="https://fdesx-eiaaa-aaaan-qd27q-cai.icp0.io/contact">on-chain</a> on
 				the{" "}
 				<a
 					href="https://internetcomputer.org/"
