@@ -13,20 +13,11 @@ const htmlInputs = Object.fromEntries(
 export default defineConfig({
 	root: frontendSrc,
 	publicDir: resolve(frontendRoot, "assets"),
-	envPrefix: ["VITE_", "CANISTER_", "DFX_"],
 	build: {
 		outDir: resolve(__dirname, "dist"),
 		emptyOutDir: true,
 		rollupOptions: {
 			input: htmlInputs,
-		},
-	},
-	server: {
-		proxy: {
-			"/api": {
-				target: "http://localhost:4943",
-				changeOrigin: true,
-			},
 		},
 	},
 });
