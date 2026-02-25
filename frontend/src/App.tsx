@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
 	BrowserRouter,
 	Navigate,
@@ -52,25 +53,41 @@ function StatusPage() {
 }
 
 function BlogPage() {
+	const [isExpanded, setIsExpanded] = useState(true);
+
 	return (
 		<div>
 			<h2>Blog</h2>
-			<h3>My first blog post, February 2026</h3>
-			<p>
-				For so many years, I've been wanting to write some cool blog post on my
-				personal website which is not really good for anything other than
-				reserving my username as a domain name.
-				<br />
-				<br />I never did it though, I was waiting for the perfect, interesting
-				and clever thing that would really make sense for me to write about on
-				my blog.
-				<br />
-				<br />
-				Today I decided: to hell with that.
-				<br />
-				<br />
-				Here&apos;s my first blog post.
-			</p>
+			<h3>
+				<button
+					type="button"
+					className="blogPostToggle"
+					aria-expanded={isExpanded}
+					onClick={() => setIsExpanded((expanded) => !expanded)}
+				>
+					<span className="blogPostToggleIndicator" aria-hidden="true">
+						{isExpanded ? "▼" : "▶"}
+					</span>
+					My first blog post, February 2026
+				</button>
+			</h3>
+			{isExpanded && (
+				<p>
+					For so many years, I've been wanting to write some cool blog post on
+					my personal website which is not really good for anything other than
+					reserving my username as a domain name.
+					<br />
+					<br />I never did it though, I was waiting for the perfect,
+					interesting and clever thing that would really make sense for me to
+					write about on my blog.
+					<br />
+					<br />
+					Today I decided: to hell with that.
+					<br />
+					<br />
+					Here&apos;s my first blog post.
+				</p>
+			)}
 		</div>
 	);
 }
@@ -129,8 +146,10 @@ function ContactPage() {
 			</div>
 			<footer>
 				This website is hosted entirely{" "}
-				<a href="https://fdesx-eiaaa-aaaan-qd27q-cai.icp0.io/contact">on-chain</a> on
-				the{" "}
+				<a href="https://fdesx-eiaaa-aaaan-qd27q-cai.icp0.io/contact">
+					on-chain
+				</a>{" "}
+				on the{" "}
 				<a
 					href="https://internetcomputer.org/"
 					target="_blank"
